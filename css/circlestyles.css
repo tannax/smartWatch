@@ -1,0 +1,52 @@
+/* Circle Area and Color */
+.outercirclearea {
+    background-color: var(--bgColor, rgba(22, 2, 2, 0.8)); /* Default to original color if --bgColor is not set */
+    padding: 100px;
+    border-radius: 30%;
+    animation: fadeInUp 2s ease-in-out;
+    filter: brightness(0.1);
+}
+
+.innercirclearea {
+    background-color: var(--bgColor, rgba(219, 0, 0, 0.2)); /* Default to original color if --bgColor is not set */
+    padding: 100px;
+    border-radius: 50%;
+}
+
+/* Hover effect */
+.outercirclearea:hover,
+.innercirclearea:hover {
+    box-shadow: 0 0 20px var(--boxShadowColor, rgba(0, 0, 0, 0.5)); /* Default shadow color */
+    border-radius: 45%;
+    filter: brightness(120%);
+    animation: hoverAnimation 0.5s ease-in-out, pulse 3s infinite alternate;
+}
+/*Cool effects*/
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        box-shadow: 0 0 200px rgba(248, 13, 13, 0.7);
+        filter: brightness(400%);
+
+    }
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 20px var(--boxShadowColor, rgba(0, 0, 0, 0.5));
+    }
+
+    50% {
+        box-shadow: 0 0 40px var(--boxShadowColor, rgba(0, 0, 0, 0.5));
+    }
+
+    100% {
+        box-shadow: 0 0 20px var(--boxShadowColor, rgba(0, 0, 0, 0.5));
+    }
+}

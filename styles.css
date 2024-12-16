@@ -1,0 +1,19 @@
+h1 {
+    font-size: 50px;
+    color: rgb(146, 255, 127);
+    /* Make the text color transparent */
+    filter: brightness(100%);
+    filter: contrast(80%);
+}
+
+h1:hover {
+    background: linear-gradient(to right, #0ed00e, #00ff2f);
+    background-clip: text;
+    /* Clip the background to the text */
+    -webkit-background-clip: text;
+    /* For WebKit browsers */
+    -webkit-text-fill-color: transparent;
+    filter: brightness(400%);
+
+
+}

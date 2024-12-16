@@ -1,0 +1,19 @@
+/* Common style for both pickers */
+#colorPicker, #bgcolorPicker {
+    opacity: 0;
+    /* Initially hidden */
+    top: 0;
+    left: 0;
+    transition: opacity 0.3s ease; /* Smooth transition */
+}
+/* Hover effect for color picker */
+.innercirclearea:hover #colorPicker {
+    opacity: 1;
+    /* Visible on hover */
+}
+
+/* Hover effect for background color picker */
+.innercirclearea:hover #bgcolorPicker {
+    opacity: 1;
+    /* Visible on hover */
+}
