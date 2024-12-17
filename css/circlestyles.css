@@ -49,8 +49,8 @@
 
 /* Responsive typography for clock */
 #clock {
-    font-size: 14vw;
-     min-font-size: 20px;
+    font-size: 12vw;
+     min-font-size: 18px;
     /* Scales with viewport width */
     color: #ffffff;
     margin: 0;
