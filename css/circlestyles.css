@@ -55,7 +55,6 @@
     color: #ffffff;
     margin: 0;
     max-width:80%;
-    word-wrap: break-word; /* Prevent overflow if text is long */
     text-align: center;
     
 }
