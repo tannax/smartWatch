@@ -32,6 +32,7 @@
     align-items: center;
     width: 60vw;
     max-width: 300px;
+    position: relative;
     /* Maximum size for smaller screens */
     height: 60vw;
     max-height: 300px;
@@ -53,6 +54,8 @@
     /* Scales with viewport width */
     color: #ffffff;
     margin: 0;
+    max-width:80%;
+    word-wrap: break-word; /* Prevent overflow if text is long */
     text-align: center;
     
 }
