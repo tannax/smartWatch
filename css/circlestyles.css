@@ -49,9 +49,13 @@
 /* Responsive typography for clock */
 #clock {
     font-size: 14vw;
+     min-font-size: 20px;
     /* Scales with viewport width */
     color: #ffffff;
     margin: 0;
+    text-align: center;
+    word-wrap: break-word; /* Prevent overflow if text is long */
+
 }
 
 
@@ -82,5 +86,55 @@
 
     100% {
         box-shadow: 0 0 20px var(--boxShadowColor, rgba(0, 0, 0, 0.5));
+    }
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .outercirclearea {
+        width: 90vw;
+        padding: 8vw;
+    }
+
+    .innercirclearea {
+        width: 70vw;
+        height: 70vw;
+        padding: 8vw;
+    }
+
+    #clock {
+        font-size: 6vw;
+        min-font-size: 18px;
+    }
+
+    input[type="color"] {
+        width: 8vw;
+        height: 8vw;
+    }
+}
+
+/* Media Query for Small Devices (Smartwatches) */
+@media (max-width: 400px) {
+    .outercirclearea {
+        width: 95vw; /* Maximize usage of the small screen */
+        padding: 5vw;
+    }
+
+    .innercirclearea {
+        width: 80vw; /* Smaller circle for smartwatch screens */
+        height: 80vw;
+        padding: 5vw;
+    }
+
+    #clock {
+        font-size: 6vw; /* Scales down for small screens */
+        min-font-size: 12px; /* Ensure clock is still readable */
+    }
+
+    input[type="color"] {
+        width: 15vw; /* Larger relative size for usability */
+        height: 15vw;
+        max-width: 30px; /* Constrain size for smartwatch */
+        max-height: 30px;
     }
 }
