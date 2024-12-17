@@ -1,16 +1,40 @@
 /* Circle Area and Color */
 .outercirclearea {
-    background-color: var(--bgColor, rgba(22, 2, 2, 0.8)); /* Default to original color if --bgColor is not set */
-    padding: 100px;
+    background-color: var(--bgColor, rgba(22, 2, 2, 0.8));
+    /* Default to original color if --bgColor is not set */
+    padding: 10vw;
+    /* Scales padding with the viewport width */
     border-radius: 30%;
     animation: fadeInUp 2s ease-in-out;
     filter: brightness(0.1);
+
+    /*  responsive behavior */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80vw;
+    /* Make width relative to viewport */
+    max-width: 500px;
+    /* Limit maximum size */
+    height: auto;
+    margin: auto;
 }
 
 .innercirclearea {
-    background-color: var(--bgColor, rgba(219, 0, 0, 0.2)); /* Default to original color if --bgColor is not set */
-    padding: 100px;
+    background-color: var(--bgColor, rgba(219, 0, 0, 0.2));
+    /* Default to original color if --bgColor is not set */
+    padding: 10vw;
     border-radius: 50%;
+    /* Ensure it remains centered and scales */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60vw;
+    max-width: 300px;
+    /* Maximum size for smaller screens */
+    height: 60vw;
+    max-height: 300px;
 }
 
 /* Hover effect */
@@ -21,6 +45,16 @@
     filter: brightness(120%);
     animation: hoverAnimation 0.5s ease-in-out, pulse 3s infinite alternate;
 }
+
+/* Responsive typography for clock */
+#clock {
+    font-size: 14vw;
+    /* Scales with viewport width */
+    color: #ffffff;
+    margin: 0;
+}
+
+
 /*Cool effects*/
 @keyframes fadeInUp {
     from {
